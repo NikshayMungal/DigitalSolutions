@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Solutions - Services</title>
+    <title>Digital Solutions - Services & Market Rates</title>
     <style>
         :root {
             --bg-color: #050b14;
@@ -90,18 +90,18 @@
 
         /* Services Content Section */
         .services-container {
-            max-width: 1000px;
-            margin: 80px auto;
+            max-width: 1200px;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
         .services-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .services-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -110,14 +110,14 @@
             margin-bottom: 10px;
         }
 
-        .services-header p {
+        .services-header p.sub {
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.95rem;
+            font-style: italic;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
-        /* Services Table */
+        /* Table Layout */
         .table-responsive {
             overflow-x: auto;
             background: var(--card-bg);
@@ -129,39 +129,45 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            text-align: left;
+            text-align: center;
         }
 
         th, td {
-            padding: 18px 24px;
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(241, 196, 15, 0.1);
         }
 
         th {
             background-color: #070e1b;
             color: #f1c40f;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 1px;
             border-bottom: 1px solid var(--border-color);
         }
 
         td {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            border-bottom: 1px solid rgba(241, 196, 15, 0.08);
+            font-size: 0.9rem;
         }
 
-        td:first-child {
+        td:first-child, th:first-child {
+            text-align: left;
             color: var(--text-light);
             font-weight: 600;
         }
 
-        tr:last-child td {
-            border-bottom: none;
+        td:last-child {
+            font-weight: bold;
+            color: #f1c40f;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgba(241, 196, 15, 0.015);
         }
 
         tr:hover td {
-            background-color: rgba(241, 196, 15, 0.02);
+            background-color: rgba(241, 196, 15, 0.04);
             color: var(--text-light);
         }
 
@@ -174,7 +180,7 @@
             color: var(--text-muted);
             font-size: 0.85rem;
             letter-spacing: 1px;
-            margin-top: 100px;
+            margin-top: 80px;
         }
     </style>
 </head>
@@ -201,39 +207,126 @@
     <!-- Services Section -->
     <div class="services-container">
         <div class="services-header">
-            <h2>Our Capabilities</h2>
-            <p>People | Technology | A Better Tomorrow</p>
+            <h2>Digital Clerk Roles: South African Market</h2>
+            <p class="sub">Estimates in ZAR, gross monthly. Retainer = 50% of clerk salary midpoint. Verify against current sources before use[cite: 2].</p>
         </div>
 
         <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
-                        <th>Service Category</th>
-                        <th>Core Focus</th>
-                        <th>Target Impact</th>
+                        <th>Clerk role</th>
+                        <th>Typical salary range</th>
+                        <th>Midpoint</th>
+                        <th>Automation potential</th>
+                        <th>Retainer (50%)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Digital Architecture</td>
-                        <td>Advanced cloud frameworks and secure circuit engineering.</td>
-                        <td>Scalable infrastructure for modern enterprise.</td>
+                        <td>Data capturer</td>
+                        <td>R7,500 - R12,000</td>
+                        <td>R9,500</td>
+                        <td>80-90%</td>
+                        <td>R4,750</td>
                     </tr>
                     <tr>
-                        <td>Technology Consulting</td>
-                        <td>Strategic roadmapping and digital transformation guidance.</td>
-                        <td>Future-proofing business models.</td>
+                        <td>Receptionist / admin assistant</td>
+                        <td>R8,000 - R13,000</td>
+                        <td>R10,500</td>
+                        <td>40-50%</td>
+                        <td>R5,250</td>
                     </tr>
                     <tr>
-                        <td>Human Capital Solutions</td>
-                        <td>Empowering people through targeted tech integration & training.</td>
-                        <td>Optimized workflows and team synergy.</td>
+                        <td>Customer service / email support clerk</td>
+                        <td>R8,000 - R13,000</td>
+                        <td>R10,500</td>
+                        <td>50-60%</td>
+                        <td>R5,250</td>
                     </tr>
                     <tr>
-                        <td>Sustainable Systems</td>
-                        <td>Eco-efficient software deployment and data management.</td>
-                        <td>Building a lasting, better tomorrow.</td>
+                        <td>Stock / inventory admin clerk</td>
+                        <td>R9,000 - R14,000</td>
+                        <td>R11,500</td>
+                        <td>60-70%</td>
+                        <td>R5,750</td>
+                    </tr>
+                    <tr>
+                        <td>Dispatch / shipping admin clerk (logistics)</td>
+                        <td>R10,000 - R15,000</td>
+                        <td>R12,500</td>
+                        <td>50-60%</td>
+                        <td>R6,250</td>
+                    </tr>
+                    <tr>
+                        <td>Freight documentation clerk (logistics)</td>
+                        <td>R10,000 - R16,000</td>
+                        <td>R13,000</td>
+                        <td>70-80%</td>
+                        <td>R6,500</td>
+                    </tr>
+                    <tr>
+                        <td>Medical billing clerk (healthcare)</td>
+                        <td>R10,000 - R16,000</td>
+                        <td>R13,000</td>
+                        <td>60-70%</td>
+                        <td>R6,500</td>
+                    </tr>
+                    <tr>
+                        <td>Practice receptionist / appointments (healthcare)</td>
+                        <td>R8,000 - R13,000</td>
+                        <td>R10,500</td>
+                        <td>50-60%</td>
+                        <td>R5,250</td>
+                    </tr>
+                    <tr>
+                        <td>Accounts payable clerk</td>
+                        <td>R11,000 - R17,000</td>
+                        <td>R14,000</td>
+                        <td>70-80%</td>
+                        <td>R7,000</td>
+                    </tr>
+                    <tr>
+                        <td>Accounts receivable / debtors clerk</td>
+                        <td>R11,000 - R17,000</td>
+                        <td>R14,000</td>
+                        <td>60-70%</td>
+                        <td>R7,000</td>
+                    </tr>
+                    <tr>
+                        <td>HR / recruitment admin</td>
+                        <td>R12,000 - R18,000</td>
+                        <td>R15,000</td>
+                        <td>50-60%</td>
+                        <td>R7,500</td>
+                    </tr>
+                    <tr>
+                        <td>Claims clerk (insurance)</td>
+                        <td>R12,000 - R18,000</td>
+                        <td>R15,000</td>
+                        <td>60-70%</td>
+                        <td>R7,500</td>
+                    </tr>
+                    <tr>
+                        <td>Junior bookkeeper</td>
+                        <td>R12,000 - R20,000</td>
+                        <td>R16,000</td>
+                        <td>60-70%</td>
+                        <td>R8,000</td>
+                    </tr>
+                    <tr>
+                        <td>Policy admin / underwriting support (insurance)</td>
+                        <td>R12,000 - R20,000</td>
+                        <td>R16,000</td>
+                        <td>50-60%</td>
+                        <td>R8,000</td>
+                    </tr>
+                    <tr>
+                        <td>Payroll clerk</td>
+                        <td>R13,000 - R20,000</td>
+                        <td>R16,500</td>
+                        <td>60-70%</td>
+                        <td>R8,250</td>
                     </tr>
                 </tbody>
             </table>
