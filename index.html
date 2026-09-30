@@ -8,11 +8,10 @@
         :root {
             --bg-color: #050b14;
             --card-bg: #0a1424;
-            --gold-primary: #f39c12;
             --gold-gradient: linear-gradient(135deg, #f1c40f 0%, #d4ac0d 50%, #b7950b 100%);
             --text-light: #ffffff;
             --text-muted: #a0aec0;
-            --accent-blue: #3498db;
+            --border-color: rgba(241, 196, 15, 0.2);
         }
 
         * {
@@ -36,7 +35,7 @@
             align-items: center;
             padding: 20px 8%;
             background: rgba(5, 11, 20, 0.95);
-            border-bottom: 1px solid rgba(241, 196, 15, 0.2);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -96,13 +95,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 90px 20px;
             background: radial-gradient(circle at center, #0a1930 0%, var(--bg-color) 70%);
             position: relative;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 15px;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
@@ -112,10 +111,9 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
-            max-xmax: 600px;
-            max-width: 600px;
+            max-width: 650px;
             margin-bottom: 30px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -139,18 +137,18 @@
             box-shadow: 0 0 30px rgba(241, 196, 15, 0.7);
         }
 
-        /* Features Section */
+        /* Value Proposition Grid */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            padding: 80px 8%;
+            padding: 60px 8% 100px 8%;
             background-color: #070e1b;
         }
 
         .feature-card {
             background: var(--card-bg);
-            border: 1px solid rgba(241, 196, 15, 0.15);
+            border: 1px solid var(--border-color);
             padding: 40px 30px;
             border-radius: 8px;
             transition: border-color 0.3s ease, transform 0.3s ease;
@@ -165,11 +163,13 @@
             color: #f1c40f;
             margin-bottom: 15px;
             font-size: 1.3rem;
+            letter-spacing: 1px;
         }
 
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         /* Footer */
@@ -177,7 +177,7 @@
             text-align: center;
             padding: 30px;
             background: #03070e;
-            border-top: 1px solid rgba(241, 196, 15, 0.1);
+            border-top: 1px solid var(--border-color);
             color: var(--text-muted);
             font-size: 0.85rem;
             letter-spacing: 1px;
@@ -207,23 +207,23 @@
     <!-- Hero Section -->
     <section class="hero">
         <h2>Engineering the Future</h2>
-        <p>People | Technology | A Better Tomorrow</p>
-        <a href="services.html" class="cta-btn">Explore Our Solutions</a>
+        <p>People | Technology | A Better Tomorrow[cite: 1]</p>
+        <a href="services.html" class="cta-btn">View Market Rates & Services</a>
     </section>
 
-    <!-- Features Section -->
+    <!-- Value Proposition Section -->
     <section class="features">
         <div class="feature-card">
-            <h3>Innovative People</h3>
-            <p>Our team brings together world-class minds dedicated to solving complex modern challenges with creative insight.</p>
+            <h3>The True Cost of Employment</h3>
+            <p>Your real selling value goes beyond basic gross salaries. Because employers also cover UIF, leave days, sick leave, equipment overhead, and management time, the true cost of a R14,000 clerk is closer to <strong>R16,000 to R17,000</strong>. This makes your 50% retainer structure drop to roughly <strong>40% of the true cost</strong>, making your automated solution an effortless business decision.</p>
         </div>
         <div class="feature-card">
-            <h3>Advanced Technology</h3>
-            <p>Leveraging cutting-edge architecture, secure digital circuits, and scalable frameworks to future-proof your ecosystem.</p>
+            <h3>Capacity & Volume Multiplier</h3>
+            <p>Automation percentage does not mean cutting your team to zero. Even if 70% of a role is automated, the business still relies on human oversight for the remaining 30%. Instead of replacing staff, frame it precisely: <strong>"You don’t need to hire a second clerk as you scale"</strong> or <strong>"Your existing clerk effortlessly handles twice the volume."</strong></p>
         </div>
         <div class="feature-card">
-            <h3>Sustainable Growth</h3>
-            <p>Creating robust digital pathways designed not just for today, but to build a lasting, prosperous tomorrow[cite: 1].</p>
+            <h3>People & Technology Synergy</h3>
+            <p>We combine human insight with secure digital infrastructure and scalable frameworks. We design sustainable digital pathways structured not just for immediate productivity, but to build a lasting, prosperous tomorrow[cite: 1].</p>
         </div>
     </section>
 
