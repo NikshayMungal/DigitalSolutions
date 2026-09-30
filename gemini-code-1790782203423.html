@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions - Home</title>
+    <style>
+        :root {
+            --bg-color: #050b14;
+            --card-bg: #0a1424;
+            --gold-primary: #f39c12;
+            --gold-gradient: linear-gradient(135deg, #f1c40f 0%, #d4ac0d 50%, #b7950b 100%);
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+            --accent-blue: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(5, 11, 20, 0.95);
+            border-bottom: 1px solid rgba(241, 196, 15, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-symbol {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-gradient);
+            mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2h2v6h6v2h-6v6h6v2h-6v6h-2v-6H6v-2h6V10H6V8h6V2z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2h2v6h6v2h-6v6h6v2h-6v6h-2v-6H6v-2h6V10H6V8h6V2z'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.55rem;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a.active, nav a:hover {
+            color: #f1c40f;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #0a1930 0%, var(--bg-color) 70%);
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-xmax: 600px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cta-btn {
+            background: var(--gold-gradient);
+            color: #050b14;
+            padding: 14px 35px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(241, 196, 15, 0.7);
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 80px 8%;
+            background-color: #070e1b;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(241, 196, 15, 0.15);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #f1c40f;
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #f1c40f;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #03070e;
+            border-top: 1px solid rgba(241, 196, 15, 0.1);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-symbol"></div>
+            <div class="logo-text">
+                <h1>DIGITAL SOLUTIONS</h1>
+                <p>People | Technology | A Better Tomorrow</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Engineering the Future</h2>
+        <p>People | Technology | A Better Tomorrow</p>
+        <a href="services.html" class="cta-btn">Explore Our Solutions</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Innovative People</h3>
+            <p>Our team brings together world-class minds dedicated to solving complex modern challenges with creative insight.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Advanced Technology</h3>
+            <p>Leveraging cutting-edge architecture, secure digital circuits, and scalable frameworks to future-proof your ecosystem.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Sustainable Growth</h3>
+            <p>Creating robust digital pathways designed not just for today, but to build a lasting, prosperous tomorrow[cite: 1].</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Digital Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
