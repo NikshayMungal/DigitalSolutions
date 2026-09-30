@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Solutions - Contact Us</title>
+    <style>
+        :root {
+            --bg-color: #050b14;
+            --card-bg: #0a1424;
+            --gold-gradient: linear-gradient(135deg, #f1c40f 0%, #d4ac0d 50%, #b7950b 100%);
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+            --border-color: rgba(241, 196, 15, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(5, 11, 20, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-symbol {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-gradient);
+            mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2h2v6h6v2h-6v6h6v2h-6v6h-2v-6H6v-2h6V10H6V8h6V2z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2h2v6h6v2h-6v6h6v2h-6v6h-2v-6H6v-2h6V10H6V8h6V2z'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.55rem;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a.active, nav a:hover {
+            color: #f1c40f;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header h2 {
+            font-size: 2.5rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .contact-header p {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-info-card, .consultation-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info-card h3, .consultation-card h3 {
+            color: #f1c40f;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .contact-info-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-info-item strong {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-info-item a, .contact-info-item span {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info-item a:hover {
+            color: #f1c40f;
+        }
+
+        .consultation-badge {
+            display: inline-block;
+            background: rgba(241, 196, 15, 0.1);
+            color: #f1c40f;
+            border: 1px solid rgba(241, 196, 15, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .consultation-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            display: block;
+            text-align: center;
+            background: var(--gold-gradient);
+            color: #050b14;
+            padding: 14px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(241, 196, 15, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(241, 196, 15, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #03070e;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-symbol"></div>
+            <div class="logo-text">
+                <h1>DIGITAL SOLUTIONS</h1>
+                <p>People | Technology | A Better Tomorrow</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Get In Touch</h2>
+            <p>People | Technology | A Better Tomorrow</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Contact Details Card -->
+            <div class="contact-info-card">
+                <h3>Direct Contact</h3>
+                
+                <div class="contact-info-item">
+                    <strong>Phone / WhatsApp</strong>
+                    <a href="tel:+27818609677">+27 81 860 9677</a>
+                </div>
+
+                <div class="contact-info-item">
+                    <strong>Email Address</strong>
+                    <a href="mailto:nikshayddmungal@gmail.com">nikshayddmungal@gmail.com</a>
+                </div>
+
+                <div class="contact-info-item">
+                    <strong>Hours</strong>
+                    <span>Monday – Friday: 8:00 AM – 5:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Free Consultation Card -->
+            <div class="consultation-card">
+                <div class="consultation-badge">Special Offer</div>
+                <h3>Free Consultation</h3>
+                <p>Take the first step toward transforming your business processes. Schedule your free consultation session with our experts today to analyze your automation and digital requirements.</p>
+                <a href="mailto:nikshayddmungal@gmail.com?subject=Free%20Consultation%20Inquiry" class="cta-btn">Book Free Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Digital Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
