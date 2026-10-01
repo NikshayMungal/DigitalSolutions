@@ -74,6 +74,7 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            align-items: center;
         }
 
         nav a {
@@ -86,6 +87,21 @@
 
         nav a.active, nav a:hover {
             color: #f1c40f;
+        }
+
+        /* Consultation Button Styling */
+        .cta-button {
+            background: var(--gold-gradient);
+            color: #050b14 !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         /* Services Content Section */
@@ -172,171 +188,9 @@
         }
 
         /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #03070e;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            margin-top: 80px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header / Navigation -->
-    <header>
-        <div class="logo-container">
-            <div class="logo-symbol"></div>
-            <div class="logo-text">
-                <h1>DIGITAL SOLUTIONS</h1>
-                <p>People | Technology | A Better Tomorrow</p>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Services Section -->
-    <div class="services-container">
-        <div class="services-header">
-            <h2>Digital Clerk Roles: South African Market</h2>
-            <p class="sub">Estimates in ZAR, gross monthly. Retainer = 50% of clerk salary midpoint. Verify against current sources before use[cite: 2].</p>
-        </div>
-
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Clerk role</th>
-                        <th>Typical salary range</th>
-                        <th>Midpoint</th>
-                        <th>Automation potential</th>
-                        <th>Retainer (50%)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Data capturer</td>
-                        <td>R7,500 - R12,000</td>
-                        <td>R9,500</td>
-                        <td>80-90%</td>
-                        <td>R4,750</td>
-                    </tr>
-                    <tr>
-                        <td>Receptionist / admin assistant</td>
-                        <td>R8,000 - R13,000</td>
-                        <td>R10,500</td>
-                        <td>40-50%</td>
-                        <td>R5,250</td>
-                    </tr>
-                    <tr>
-                        <td>Customer service / email support clerk</td>
-                        <td>R8,000 - R13,000</td>
-                        <td>R10,500</td>
-                        <td>50-60%</td>
-                        <td>R5,250</td>
-                    </tr>
-                    <tr>
-                        <td>Stock / inventory admin clerk</td>
-                        <td>R9,000 - R14,000</td>
-                        <td>R11,500</td>
-                        <td>60-70%</td>
-                        <td>R5,750</td>
-                    </tr>
-                    <tr>
-                        <td>Dispatch / shipping admin clerk (logistics)</td>
-                        <td>R10,000 - R15,000</td>
-                        <td>R12,500</td>
-                        <td>50-60%</td>
-                        <td>R6,250</td>
-                    </tr>
-                    <tr>
-                        <td>Freight documentation clerk (logistics)</td>
-                        <td>R10,000 - R16,000</td>
-                        <td>R13,000</td>
-                        <td>70-80%</td>
-                        <td>R6,500</td>
-                    </tr>
-                    <tr>
-                        <td>Medical billing clerk (healthcare)</td>
-                        <td>R10,000 - R16,000</td>
-                        <td>R13,000</td>
-                        <td>60-70%</td>
-                        <td>R6,500</td>
-                    </tr>
-                    <tr>
-                        <td>Practice receptionist / appointments (healthcare)</td>
-                        <td>R8,000 - R13,000</td>
-                        <td>R10,500</td>
-                        <td>50-60%</td>
-                        <td>R5,250</td>
-                    </tr>
-                    <tr>
-                        <td>Accounts payable clerk</td>
-                        <td>R11,000 - R17,000</td>
-                        <td>R14,000</td>
-                        <td>70-80%</td>
-                        <td>R7,000</td>
-                    </tr>
-                    <tr>
-                        <td>Accounts receivable / debtors clerk</td>
-                        <td>R11,000 - R17,000</td>
-                        <td>R14,000</td>
-                        <td>60-70%</td>
-                        <td>R7,000</td>
-                    </tr>
-                    <tr>
-                        <td>HR / recruitment admin</td>
-                        <td>R12,000 - R18,000</td>
-                        <td>R15,000</td>
-                        <td>50-60%</td>
-                        <td>R7,500</td>
-                    </tr>
-                    <tr>
-                        <td>Claims clerk (insurance)</td>
-                        <td>R12,000 - R18,000</td>
-                        <td>R15,000</td>
-                        <td>60-70%</td>
-                        <td>R7,500</td>
-                    </tr>
-                    <tr>
-                        <td>Junior bookkeeper</td>
-                        <td>R12,000 - R20,000</td>
-                        <td>R16,000</td>
-                        <td>60-70%</td>
-                        <td>R8,000</td>
-                    </tr>
-                    <tr>
-                        <td>Policy admin / underwriting support (insurance)</td>
-                        <td>R12,000 - R20,000</td>
-                        <td>R16,000</td>
-                        <td>50-60%</td>
-                        <td>R8,000</td>
-                    </tr>
-                    <tr>
-                        <td>Payroll clerk</td>
-                        <td>R13,000 - R20,000</td>
-                        <td>R16,500</td>
-                        <td>60-70%</td>
-                        <td>R8,250</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Digital Solutions. All Rights Reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Digital Solutions. All Rights Reserved.</p>
+        </footer>
 
 </body>
 </html>
